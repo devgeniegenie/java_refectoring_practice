@@ -1,4 +1,4 @@
-package com.ReplaceMagicNumberWithSymbolicConstant.after;
+package com.ReplaceMagicNumberWithSymbolicConstant.after1;
 
 public class Main {
 
