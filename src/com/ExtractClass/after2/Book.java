@@ -1,10 +1,16 @@
-package com.ExtractClass.after1;
+package com.ExtractClass.after2;
 
 public class Book {
     private String _title;
     private String _isbn;
     private String _price;
+
     private Author _author;
+
+    //저자 정보 불변을 위해서 ImmutableAuthor 객체로 _author 필드값 넘김
+    public ImmutableAuthor get_author() {
+        return _author;
+    }
 
     public Book(String title, String isbn, String price, String authorName, String authorMail) {
         this._title = title;
@@ -45,7 +51,7 @@ public class Book {
         return "<" + element + ">" + content + "</" + element + ">";
     }
 
-    class Author {
+    class Author implements ImmutableAuthor{
         private String _name;
         private String _mail;
 
